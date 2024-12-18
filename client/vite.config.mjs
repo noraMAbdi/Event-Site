@@ -1,3 +1,4 @@
+// vite.config.mjs
 import { defineConfig } from "vite";
 
 export default defineConfig({
@@ -8,10 +9,10 @@ export default defineConfig({
         xfwd: true,
       },
     },
-    resolve: {
-      alias: {
-        "@azure/msal-browser": "@azure/msal-browser/dist/msal-browser.esm.js",
-      },
+  },
+  resolve: {
+    alias: {
+      "@azure/msal-browser": "@azure/msal-browser/dist/msal-browser.esm.js",
     },
   },
 });
