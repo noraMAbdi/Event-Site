@@ -1,0 +1,15 @@
+* {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  background: linear-gradient(rgb(42, 29, 80), rgb(69, 112, 126));
+  text-align: center;
+}
+h1 {
+  font-size: 40px;
+  color: white;
+}

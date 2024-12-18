@@ -1,0 +1,37 @@
+{
+  "scripts": {
+    "dev": "concurrently npm:dev:client npm:dev:server",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "postinstall": "npm run install:client && npm run install:server",
+    "install:client": "cd client && npm install --include=dev",
+    "install:server": "cd server && npm install",
+    "build": "npm run build:client",
+    "start": "cd server && npm start",
+    "test": "npm run prettier:check && npm run test:client",
+    "test:client": "cd client",
+    "test:prettier": " npm install --save-dev prettier",
+    "prettier:check": "prettier --check .",
+    "prepare": "husky",
+    "test:server": "cd server",
+    "build:client": "cd client && npm run build"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.2",
+    "concurrently": "^9.0.1",
+    "husky": "^9.1.7",
+    "prettier": "^3.4.2"
+  },
+  "dependencies": {
+    "@azure/msal-browser": "^3.27.0",
+    "@azure/msal-react": "^2.2.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongodb": "^6.10.0",
+    "path-to-regexp": "^8.2.0",
+    "typescript": "^5.6.3",
+    "vite-plugin-node-polyfills": "^0.22.0"
+  }
+}
